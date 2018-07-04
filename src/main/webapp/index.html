@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Five in a Row</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body onload="drawBoard()">
+<div class="container">
+    <nav id="mynavbar" class="navbar sticky-top navbar-light bg-light">
+        <a class="navbar-brand" href="#">Five in a Row</a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Game</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#github">GitHub</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#author">Author</a>
+            </li>
+        </ul>
+    </nav>
+    <div align="center">
+        <p>
+            <strong>Try to beat the machine by putting five dots in a row, a column or a diagonal!</strong><br>
+            <small>You start the game, but watch out: the machine is strong! :)</small>
+        </p>
+
+        <canvas id="gameCanvas"></canvas>
+    </div>
+    <h4 id="github">GitHub</h4>
+    <p>Source code available at
+        <a href="https://github.com/kavai77/fiverowgame">https://github.com/kavai77/handwriting</a>
+    </p>
+    <h4 id="author">Author</h4>
+    <p>Csaba Kavai
+        <a href="https://www.linkedin.com/in/csaba-kavai/">Linked profile</a>
+    </p>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="game.js"></script>
+</body>
+</html>
