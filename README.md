@@ -1,6 +1,6 @@
 # Five Row Game
 Play against the AI!
 
-Game: https://fiverowgame.appspot.com
+Game: https://fiverowgame.himadri.eu
 
-![game](https://github.com/kavai77/fiverowgame/blob/master/src/main/webapp/FiveRowGame.jpeg)
+![game](https://github.com/kavai77/fiverowgame/blob/master/src/main/resources/static/FiveRowGame.jpeg)

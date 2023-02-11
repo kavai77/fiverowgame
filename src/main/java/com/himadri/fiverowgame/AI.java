@@ -1,9 +1,9 @@
-package com.kavaicsaba.fiverowgame;
+package com.himadri.fiverowgame;
 
 import org.apache.commons.lang3.RandomUtils;
 import org.springframework.stereotype.Component;
 
-import java.awt.*;
+import java.util.Arrays;
 
 @Component
 public class AI {
@@ -118,8 +118,8 @@ public class AI {
 
         nbOgBiggestScore = RandomUtils.nextInt(0, nbOgBiggestScore);
         int z = 0;
-        for (int x = 0; x < dimensions.width; x++) {
-            for (int y = 0; y < dimensions.height; y++) {
+        for (int x = 0; x < dimensions.getWidth(); x++) {
+            for (int y = 0; y < dimensions.getHeight(); y++) {
                 if (scores[x][y] == biggestScore) {
                     if (z == nbOgBiggestScore) {
                         field[x][y] = 2;
@@ -136,8 +136,8 @@ public class AI {
 
     public GameState isEnd(int[][] field) {
         Rectangle dimensions = new Rectangle(field.length, field[0].length);
-        for (int x = 0; x < dimensions.width; x++) {
-            for (int y = 0; y < dimensions.height; y++) {
+        for (int x = 0; x < dimensions.getWidth(); x++) {
+            for (int y = 0; y < dimensions.getHeight(); y++) {
                 int player = field[x][y];
                 if (player == 0) {
                     continue;
@@ -160,12 +160,10 @@ public class AI {
                 }
             }
         }
-        for (int x = 0; x < field.length; x++) {
-            for (int y = 0; y < field[x].length; y++) {
-                if (field[x][y] == 0) {
-                    return new GameState(GameState.State.GAME_IN_PROGRESS);
-                }
-            }
+        if (Arrays.stream(field)
+                .flatMapToInt(Arrays::stream)
+                .anyMatch(it -> it == 0)) {
+            return new GameState(GameState.State.GAME_IN_PROGRESS);
         }
 
         return new GameState(GameState.State.DRAW);

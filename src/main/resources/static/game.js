@@ -37,15 +37,10 @@ function drawBoard(){
 
     ctx.strokeStyle = "white";
     ctx.stroke();
-
-    $.ajax({
-      url: "/service/warmup",
-      method: "GET"
-    });
 }
 
 function mouseClick(e) {
-    if (currentPlayer != 1) {
+    if (currentPlayer !== 1) {
         return;
     }
     var xCoord = e.pageX - $(this).offset().left;
@@ -57,7 +52,7 @@ function mouseClick(e) {
     }
     makeMove(x, y);
     $.ajax({
-      url: "/service/moveai",
+      url: "/moveai",
       method: "POST",
       contentType: "application/json; charset=UTF-8",
       dataType: "json",
