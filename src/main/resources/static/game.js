@@ -3,7 +3,7 @@ var rows = 20;
 var cols = 20;
 var gridsize = 25;
 var padding = 10;
-var playerColor = ["red", "green"];
+var playerColor = ["red", "yellow"];
 var currentPlayer = 1;
 
 var field = new Array(cols);
@@ -89,7 +89,7 @@ function drawWinningLine(x1, y1, x2, y2) {
     ctx.beginPath();
     ctx.moveTo((x1 + 0.5) * gridsize + padding, (y1 + 0.5) * gridsize + padding);
     ctx.lineTo((x2 + 0.5) * gridsize + padding, (y2 + 0.5) * gridsize + padding);
-    ctx.strokeStyle = "yellow";
+    ctx.strokeStyle = "green";
     ctx.lineWidth=4;
     ctx.stroke();
 

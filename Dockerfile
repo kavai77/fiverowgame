@@ -1,4 +1,3 @@
-FROM ubuntu:20.04
-EXPOSE 8080
-COPY ./target/fiverowgame .
-ENTRYPOINT ["/fiverowgame"]
+FROM eclipse-temurin:21
+ADD target/fiverowgame-*.jar /usr/share/app.jar
+ENTRYPOINT ["java", "-jar", "/usr/share/app.jar"]
